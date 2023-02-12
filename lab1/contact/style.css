@@ -1,0 +1,77 @@
+.gridcontainer{
+    display: grid;
+    background-color:lightblue;
+}
+.generic{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.about{
+    border: 1px solid grey
+}
+.resume{
+    border-right: 1px solid grey
+}
+.licenses{
+    border-right: 1px solid grey
+}
+.contact{
+    border-right: 1px solid grey
+}
+.select:hover{
+    color: blue;
+}
+.select:active{
+    color: red;
+}
+.gridmenu{
+    display: flex;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;  
+}
+.name{
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+    border: 5px solid grey;
+    background-color: white;
+}
+#img{
+    border: 5px solid grey;
+    width: 400px;
+    height: 400px;
+}
+.img {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    text-align: center;
+    color: white;
+  } 
+ .itemcontainer{
+    justify-content: center;
+    align-items: center;  
+}
+.linkcontainer{
+    color: white;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 800px){
+    .gridcontainer{
+        display: grid;
+        grid-template-columns: 200px, 200px, repeat(4,1fr);
+        grid-template-rows: repeat(8,1fr);
+    }
+    body{background-color: lightblue;}
+    .gridmenu{ grid-column: 1 /span 8; grid-row: 1;}
+    .name{grid-column: 2/6;grid-row: 2;}
+    /* .itemcontainer{grid-column: 6/8;grid-row: 6/8;}  */
+
+
+}
